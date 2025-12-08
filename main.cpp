@@ -1,7 +1,12 @@
 #include <iostream>
 using namespace std;
 
-
+const int maxHP = 50;
+const int maxEP = 5;
+int EPRegen = 0;
+int HP = 1;
+int ATK = 10;
+int END = 15;
 
 int intro()
 {
@@ -24,13 +29,17 @@ int intro()
         if (choice == 1){
         
         } else if (choice == 2){
-            
+        ATK += 11 + 2 * (n - 1);
+        cout << ATK;
         } else if (choice == 3){
             
         } else if (choice == 4){
             
         } else if (choice == 5){
             
+        } else {
+        ATK = 11 + 2 * (n - 1);
+        cout << ATK;
         }
     }
     return n;
