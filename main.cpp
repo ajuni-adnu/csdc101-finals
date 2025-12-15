@@ -16,12 +16,6 @@ int playerStats[5] = {1,0,0,10,15};
 // Arlong
 // Order of arrays: enemyHP_current[0], enemyHP_max[1], enemyATK[2], enemyEND[3], enemyPhase[4]
 int enemyStats[5] = {2500, 2500, 520, 600, 1};
-// int enemyHP_current;
-// int enemyHP_max;
-// int enemyATK;
-// int enemyEND;
-// int enemyPhase;
-
 
 void showplayerStats(){
     cout << "\n" << name << "'s current status  \nfor the month: \n";
@@ -39,9 +33,35 @@ void showenemyStats(){
     cout << "Phase: " << enemyStats[4] << endl;
 }
 
-
 void intro(){
+    int choice;
+cout << R"(
+    Act 1 — The Fall of Cocoyashi
+    
+    Cocoyashi Village, once peaceful and full of laughter, falls into despair the day Arlong and his crew arrive. 
+Their demands are simple: every human must pay tribute for the right to live. 
+Bell-mere, unable to pay for herself and instead paid for her daughters, is executed in front of Nami, Nojiko, and Keigan, 
+who stands powerless as Arlong’s cruelty unfolds.
 
+    Press any key to continue: )"; cin >> choice;
+    
+cout << R"(
+    Enraged, Keigan lunges at the Fishman captain.
+His blow connects — but it’s meaningless. 
+Arlong easily defeats him in retaliation, taunting that humans can never hope to rival the might of a Fishman. 
+To make an example of him, Arlong throws Keigan into the open sea, declaring that “the weak belong to the deep.”
+
+    Press any key to continue: )"; cin >> choice;
+    
+cout << R"(
+    But Keigan survives. 
+The sea does not claim him. 
+He drifts unconscious for days until washing ashore on another island, 
+battered yet alive — a miracle that becomes his hope and his resolve. 
+The weakness and loss ignite a single purpose within him: 
+to return strong enough to destroy Arlong’s tyranny and return to Cocoyashi Village.
+
+    Press any key to continue: )"; cin >> choice;
 }
 
 int trainingLoop()
@@ -51,11 +71,11 @@ int trainingLoop()
     char response = toupper(response);
     
     if (yap == 'Y'){
-        cout <<"[Scene 2: East Blue]\n After surviving Arlong’s invasion of Cocoyashi Village, Keigan “Kei” Lee vows revenge.\nBeaten and left for dead, he spends eight years training in isolation to surpass his limits.\n\n";
+        cout <<"\n[Scene 2: East Blue]\n After surviving Arlong’s invasion of Cocoyashi Village, Keigan “Kei” Lee vows revenge.\nBeaten and left for dead, he spends eight years training in isolation to surpass his limits.\n\n";
     } else {
         cout << "[Scene 2: East Blue]\n ";
         cout << R"(
- After drifting for days at sea, Keigan’s unconscious body is discovered by the Good Heart Pirates, 
+    After drifting for days at sea, Keigan’s unconscious body is discovered by the Good Heart Pirates, 
 a small and kind-hearted crew sailing the East Blue. They nurse him back to health and drop him off at a quiet,
 uninhabited island, where he can recover and start anew. 
 Before they leave, their captain tells him: 
@@ -145,7 +165,7 @@ int bossFight()
     
     if (yap != 'Y'){
 cout << R"(
-By the eighth year, Keigan’s transformation is complete. 
+    By the eighth year, Keigan’s transformation is complete. 
 His once lean frame now carries the strength of countless battles with nature itself. 
 The scroll lies torn and faded, but its lessons live within him.
 
@@ -186,7 +206,7 @@ cout << R"(
 
     [Arrival at Cocoyashi Village]
     
-The group reaches Cocoyashi and finds a village hollowed by fear. 
+    The group reaches Cocoyashi and finds a village hollowed by fear. 
 They meet Nojiko, who—together with Luffy and Sanji (who arrive with the Baratie party and stand with the crew)—explains Nami’s past:
 Bell-mère’s death, the tribute, Arlong’s rule, and Nami’s forced servitude. 
 Nojiko tells the story plainly and painfully; the Straw Hats listen, stunned. 
@@ -207,7 +227,7 @@ cout << R"(
 
     [The March to Arlong Park]
     
-United, the Straw Hats and Keigan move toward Arlong Park. 
+    United, the Straw Hats and Keigan move toward Arlong Park. 
 The corrupt local Marines and Fishman sentries try to block them,
 but the crew cuts through the bureaucracy with blunt force and blunt words. 
 As they approach Arlong Park, the gates loom like a promise and a threat: 
